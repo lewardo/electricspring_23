@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Victor Mono", monospace;
+    user-select: none;
+}
+
+body {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: #d1598f;
+}
+
+.corner-image {
+    position: absolute;
+    width: min(75vw, 640px);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%)
+}
+
+.nw {
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.se {
+    bottom: 0;
+    right: 0;
+}
+
+.background-graphic {
+    position: absolute;
+    max-width: 150vw;
+    max-height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.logos {
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    padding: 0 0 0 10vmin;
+    background: linear-gradient(to left, #ffffffff, #ffffff00);
+}
+
+.logos img {
+    height: 5vmin;
+}
+
+.credits {
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    padding: calc((5vmin - min(10pt, 2vw)) * 0.5) 8pt;
+    background: linear-gradient(to right, #ffffffff, #ffffff00);
+    font-size: min(10pt, 2vw);
+}
+
+.credits a, .credits a:visited {
+    color: #000;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+}
+
+.title {
+    position: absolute;
+    top: min(47vw, 60vh);
+    display: grid;
+    place-items: center;
+    margin: 0 0 0 5vmin;
+    font-size: min(10em, 18vmin);
+    color: #f9b233;
+    text-shadow: -4px -4px #000;
+}
+
+.title div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 40pt;
+}
+
+.title div span {
+    margin: calc(-0.3 * min(10em, 18vmin)) 0;
+    overflow: visible;
+}
+
+.tagline {
+    position: absolute;
+    top: min(36vh, 28vw);
+    left: min(6vh, 40pt);
+    display: grid;
+    place-items: center;
+    font-size: min(32pt, 4vw);
+    color: #fff;
+}
+
+.menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    margin: 10pt;
+}
+
+.link {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 min(2vw, 20px);
+    color: #fff;
+    font-size: min(3.6vw, 24pt);
+    font-weight: bold;
+    text-shadow: -2px -2px #000;
+}
+
+.schedule {
+    position: absolute;
+    z-index: 4;
+    width: 100vw;
+    height: 75vh;
+    bottom: -50%;
+    left: 0;
+    padding: 2%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    opacity: 0;
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.schedule::-webkit-scrollbar {
+    display: none;
+}
+
+.schedule-group {
+    list-style: none;
+    font-weight: bold;
+    margin: 1px 0;
+}
+
+.schedule-group li {
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: -2px -2px #000;
+}
+
+.event-detail {
+    margin: 0 0 0 10vw;
+} 
+
+.group-title {
+    font-size: 20pt;
+}
+
+.group-title a, .group-title a:visited {
+    color: #fff;
+}
+
+.artist-detail {
+    color: #fff;
+    font-size: 16pt;
+    cursor: pointer;
+}
+
+.artist-detail span {
+    text-decoration: underline;
+}
+
+.date-detail {
+    font-size: 20pt;
+}
+
+.info {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    top: 100vh;
+    left: 0vw;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.go-away {
+    position: absolute;
+    top: 0;
+    right: 2vmax;
+    color: white;
+    font-size: 4vmax;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info-container {
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    top: 10vh;
+    left: 10vw;
+}
+
+.image {
+    position: absolute;
+    left: 0;
+}
+
+.image img {
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+.block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #f9b233;
+}
+
+.info-text {
+    position: absolute;
+    width: min(100vh, 80vw);
+    height: 90vh;
+    top: 0;
+    z-index: 15;
+    right: 0;
+    color: white;
+    text-shadow: -2px -2px black;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.info-text::-webkit-scrollbar {
+    display: none;
+}
+
+.info-background {
+    position: absolute;
+    top: 20%;
+    padding: 8%;
+    padding-right: 0;
+    background-color: #00000088;
+}
+
+.event {
+    font-weight: bold;
+    font-size: 4vh;
+}
+
+.oneline {
+    font-size: 16pt;
+}
+
+.info a, .info a:hover, .info a:visited {
+    color: #fff;
+}
+

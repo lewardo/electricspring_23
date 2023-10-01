@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>electric spring</title>
+
+    <meta name="description" content="the electric spring">
+    <meta name="author" content="lewardo">
+
+    <link rel="shortcut icon" href="assets/img/logo.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/victormono@latest/dist/index.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/mgGlitch/src/mgGlitch.min.js"></script>
+    <script src="https://www.jqueryscript.net/demo/reveal-shuffle-glitch/glitch.js"></script>
+    <script src="https://unpkg.com/typeit"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <img src="assets/img/bg_corner.png" class="corner-image nw">
+    <img src="assets/img/bg_corner.png" class="corner-image se">
+
+    <img src="assets/img/overlay.png" alt="" class="background-graphic" id="background">
+
+    <div id="logos" class="logos">
+        <img src="assets/img/supported.png" alt="supported by:">
+        <a href="https://amespace.uk/" target="_blank">
+            <img src="assets/img/ame.png" alt="ame">
+        </a>
+        <a href="https://www.thehiss.org/" target="_blank">
+            <img src="assets/img/hiss.png" alt="HISS">
+        </a>
+        <a href="https://www.hud.ac.uk/open-days/undergraduate/campus/music-tech/" target="_blank">
+            <img src="assets/img/hudd.png" alt="Huddersfield University">
+        </a>
+    </div>
+
+    <div id="credits" class="credits">
+        &lt;/&gt; // <a href="http://t.ly/qIQs" target="_blank">@lewardo</a>; graphics // Stephen Harvey / @redstefff
+    </div>
+
+    <div class="overlay">
+        <div id="tagline" class="tagline"></div>
+        <div id="title" class="title">
+            <div>
+                <span id="electric">ECLECTIC</span>
+                <span>SPRING</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="link" id="open-schedule">schedule</div>
+        <div class="link" id="open-tickets">get tickets</div>
+    </div>
+    
+    <div class="schedule" id="schedule">
+        <ul class="schedule-group">
+            <li class="group-title">
+                Concerts - 19:30 @ <a href="https://goo.gl/maps/jJm3xawLvRgkp7Jg7" target="_blank">Phipps Hall - University of Huddersfield HD1 3DH</a>
+            </li>
+            <li class="event-detail">
+                <span class="day-detail">wed</span>
+                <span class="date-detail">15</span>
+                <span class="artist-detail"><span onClick="moreinfo('skrika.json')">SKRIKA</span> + <span onclick="moreinfo('yvette.json')">Yvette Janine Jackson</span></span>
+            </li>
+            <li class="event-detail">
+                <span class="day-detail">thur</span>
+                <span class="date-detail">16</span>
+                <span class="artist-detail"><span onclick="moreinfo('saenature.json')">saenature</span> + <span onclick="moreinfo('volker.json')">Volker Böhm</span></span>
+            </li>
+            <li class="event-detail">
+                <span class="day-detail">fri</span>
+                <span class="date-detail">17</span>
+                <span class="artist-detail"><span onclick="moreinfo('jsc.json')">Jankowska/Stillabower/Christman</span> + <span onclick="moreinfo('viola.json')">Viola Yip</span></span>
+            </li>
+            <li class="event-detail">
+                <span class="day-detail">sat</span>
+                <span class="date-detail">18</span>
+                <span class="artist-detail"><span onclick="moreinfo('alessia.json')">Alessia Anastassopulos</span> + <span onclick="moreinfo('ppl.json')">People Like Us</span></span>
+            </li>
+        </ul>
+        <ul class="schedule-group">
+            <li class="group-title">
+                Late concerts - 21:00 @ <a href="https://goo.gl/maps/1fa1LQZqsnhzV4j7A" target="_blank">dai hall HD1 2QF</a>
+            </li>
+            <li class="event-detail">
+                <span class="day-detail">fri</span>
+                <span class="date-detail">17</span>
+                <span class="artist-detail"><span onclick="moreinfo('adrep.json')">adore/repel</span> + <span onclick="moreinfo('nacre.json')">Nacre</span></span>
+            </li>
+            <li class="event-detail">
+                <span class="day-detail">sat</span>
+                <span class="date-detail">18</span>
+                <span class="artist-detail"><span onclick="moreinfo('owen.json')">Owen Green</span> + <span onclick="moreinfo('wobbly.json')">Wobbly</span></span>
+            </li>
+        </ul>
+        <ul class="schedule-group">
+            <li class="group-title">
+                Creative coding lab meetup - 12 noon @ <a href="https://goo.gl/maps/jJm3xawLvRgkp7Jg7" target="_blank">RSG/01</a>
+            </li>
+            <li class="event-detail">
+                <span class="day-detail">sat</span>
+                <span class="date-detail">18</span>
+                <span class="artist-detail"><span onclick="moreinfo('ccl.json')">CCL Symposium</span></span>
+            </li>
+        </ul>
+        <ul class="schedule-group">
+            <li class="group-title">
+                Installation by <span style="cursor: pointer; text-decoration: underline;" onclick="moreinfo('pete.json')">Pete Batchelor</span> @ <a href="https://goo.gl/maps/jJm3xawLvRgkp7Jg7" target="_blank">Richard Steinitz building</a> throughout
+            </li>
+        </ul>
+    </div>
+    
+    <div class="info" id="info">
+        <div class="go-away" onclick="hideinfo()">&times;</div>
+        <div class="info-container">
+            <div class="image">
+                <img src="" alt="" id="hero">
+                <div class="block" id="block"></div>
+            </div>
+            <div class="info-text">
+                <div class="info-background">
+                    <div class="event" id="info-event"></div>
+                    <br>
+                    <div class="oneline" id="info-oneline"></div>
+                    <br>
+                    <div class="bio" id="info-bio"></div>
+                    <br>
+                    <div class="propaganda" id="info-links"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
